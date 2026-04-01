@@ -1,0 +1,85 @@
+/* Styling untuk keseluruhan halaman */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0d1117; /* Hitam pekat khas gaming */
+    background-image: radial-gradient(circle, #1a1f2c 1px, #0d1117 1px);
+    background-size: 20px 20px; /* Efek grid halus di background */
+    color: #e6edf3;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container utama (Efek Glassmorphism) */
+.card {
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(22, 27, 34, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.2); /* Glow biru tipis */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Garis dekorasi neon di atas card */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00ffcc);
+}
+
+/* Header utama (Efek Neon Text) */
+h1 {
+    color: #00ffcc; /* Hijau neon / Cyan */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    text-align: center;
+}
+
+/* Paragraf */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #c9d1d9;
+}
+
+/* Styling Khusus untuk Info Nama & NIM */
+b, strong {
+    color: #007bff; /* Biru elektrik untuk label */
+}
+
+/* Garis pemisah neon */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #30363d, transparent);
+    margin: 20px 0;
+}
+
+/* Greeting (Salam dari dapoi) */
+small {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    text-align: center;
+    color: #6e7681;
+    margin-top: 10px;
+}
+
+/* Styling untuk Logo Barca agar pas di tengah */
+img {
+    display: block;
+    margin: 20px auto;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1) rotate(5deg); /* Efek hover ala game */
+}
