@@ -33,7 +33,7 @@ export default function Header() {
                 {/* Profile Section */}
                 <div id="profile-container" className="flex items-center space-x-4 border-l pl-4 border-gray-300">
                     <span id="profile-text">
-                        Hello, <b>Farhan Gusri Fadhlah</b>
+                        Hello, <b>Daviansyah Pratama</b>
                     </span>
                     <img
                         id="profile-avatar" 
