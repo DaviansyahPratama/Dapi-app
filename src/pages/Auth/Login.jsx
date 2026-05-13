@@ -26,25 +26,34 @@ export default function Login() {
   };
 
   /* process form */
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      setLoading(true);
-      setError("");
+  try {
+    setLoading(true);
+    setError("");
 
-      console.log(dataForm);
+    // simulasi login
+    if (
+      dataForm.email === "admin@gmail.com" &&
+      dataForm.password === "admin123"
+    ) {
 
-      // contoh request login
-      // await axios.post("http://localhost:8000/api/login", dataForm);
+      // simpan login
+      localStorage.setItem("isLogin", true);
 
-      navigate("/");
-    } catch (err) {
+      navigate("/dashboard");
+
+    } else {
       setError("Email atau password salah");
-    } finally {
-      setLoading(false);
     }
-  };
+
+  } catch (err) {
+    setError("Terjadi kesalahan");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div>
